@@ -4,7 +4,7 @@ const { Schema } = mongoose
 const { ObjectId } = Schema
 
 const AddressModel = new Schema({
-  title: {
+  name: {
     type: String,
     required: true,
   },

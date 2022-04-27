@@ -6,6 +6,15 @@ const { ObjectId } = Schema
 const SaleOffModel = new Schema({
   name: String,
   description: String,
+  start_time: {
+    type: Date,
+    default: new Date(),
+  },
+  duration: {
+    type: Number,
+    default: -1,
+  },
+
   shop: {
     type: ObjectId,
     ref: 'Shop',
@@ -23,6 +32,10 @@ const SaleOffModel = new Schema({
       unit: {
         type: String,
         default: '%',
+      },
+      quantity: {
+        type: Number,
+        default: -1,
       },
     },
   ],
